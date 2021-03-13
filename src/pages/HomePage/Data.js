@@ -1,3 +1,7 @@
+import myImage from "../../Images/svg-1.svg"
+import myImage2 from "../../Images/profile.jpg"
+import myImage3 from "../../Images/svg-2.svg"
+import myImage4 from "../../Images/svg-3.svg"
 
 export const homeObjOne={
     lightBg: false,
@@ -10,7 +14,7 @@ export const homeObjOne={
     headLine:'Lead Generation Specialist for Online Businesses',
     lightText:true,
     topLine:"Marketting Agency",
-    img: require("../../Images/img1.svg"),
+    img: (`${myImage}`),
     start:"",
     alt:"Image"
 }
@@ -26,7 +30,7 @@ export const homeObjTwo={
     headLine:'Our Products are used all over the world',
     lightText: false,
     topLine:"Products",
-    img: require('../../Images/profile.jpg'),
+    img: (`${myImage2}`),
     start:"true",
     alt:"Image"
 }
@@ -42,7 +46,7 @@ export const homeObjThree={
     headLine:'Lead Generation Specialist for Online Businesses',
     lightText:true,
     topLine:"Marketting Agency",
-    img: require('../../Images/svg-1.svg'),
+    img: (`${myImage3}`),
     start:"",
     alt:"Image"
 }
@@ -58,7 +62,7 @@ export const homeObjFour={
     headLine:'Lead Generation Specialist for Online Businesses',
     lightText:true,
     topLine:"Marketting Agency",
-    img: require('../../Images/svg-3.svg'),
+    img: (`${myImage4}`),
     start:"true",
     alt:"Image"
 }
