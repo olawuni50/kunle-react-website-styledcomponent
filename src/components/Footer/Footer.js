@@ -4,10 +4,14 @@ import { Button } from '../NavBars/globalStyles';
 import {FooterContainer, FooterSubHeading, FooterSubscription, FooterSubText, Form, FormInput,
 FooterLinkTitle, FooterLinksItems, FooterLink,FooterLinksContainer, FooterLinksWrapper,
 SocialIcon, SocialIconLink, SocialLogo, SocialMedia, SocialMediaWrap, WebsiteRights,
-SocialIcons} from "./Footer.element"
+SocialIcons} from "./Footer.element";
+import {animateScroll as scroll} from "react-scroll";
 
 export const Footer = () => {
-    return (
+    const toggleHome=()=>{
+        scroll.scrollToTop()
+    }
+    return ( 
         <FooterContainer>
             <FooterSubscription>
                 <FooterSubHeading>
@@ -19,7 +23,7 @@ export const Footer = () => {
                 </FooterSubText>
                 <Form>
                     <FormInput name="email" type="email" placeholder="Your Email"/>
-                        <Button fontBig big>Subscribe</Button>
+                        <Button fontBig primary>Subscribe</Button>
                   
                 </Form>
             </FooterSubscription>
@@ -27,15 +31,14 @@ export const Footer = () => {
                 <FooterLinksWrapper>
                     <FooterLinksItems>
                         <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to="/sign-up">How it works</FooterLink>
-                        <FooterLink to="/">Testimonials</FooterLink>
-                     <FooterLink to="/">Careers</FooterLink>
-                        <FooterLink to="/">Investors</FooterLink>
-                        <FooterLink to="/">Terms of Service</FooterLink>
+                        <FooterLink to="products">Products</FooterLink>
+                        <FooterLink to="services">Services</FooterLink>
+                     <FooterLink to="contact">Contact Us</FooterLink>
+                        <FooterLink to="team">Our Teams</FooterLink>
                     </FooterLinksItems>
                     <FooterLinksItems>
                         <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                        <FooterLink to="/sign-up">How it works</FooterLink>
+                        <FooterLink to="/">How it works</FooterLink>
                         <FooterLink to="/">Testimonials</FooterLink>
                         <FooterLink to="/">Careers</FooterLink>
                         <FooterLink to="/">Investors</FooterLink>
@@ -44,30 +47,26 @@ export const Footer = () => {
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>
                     <FooterLinksItems>
-                        <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to="/sign-up">How it works</FooterLink>
-                        <FooterLink to="/">Testimonials</FooterLink>
-                        <FooterLink to="/">Careers</FooterLink>
-                        <FooterLink to="/">Investors</FooterLink>
-                        <FooterLink to="/">Terms of Service</FooterLink>
-                    </FooterLinksItems>
+                        <FooterLinkTitle>Office in USA</FooterLinkTitle>
+                        <FooterLink to="/sign-up">23b Silicon Valley, Califonia</FooterLink>
+                        <FooterLink to="/">Mon-Sat: 8:00am - 5:00pm</FooterLink>
+                        </FooterLinksItems>
                     <FooterLinksItems>
-                        <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to="/sign-up">How it works</FooterLink>
-                        <FooterLink to="/">Testimonials</FooterLink>
-                        <FooterLink to="/">Careers</FooterLink>
-                        <FooterLink to="/">Investors</FooterLink>
-                        <FooterLink to="/">Terms of Service</FooterLink>
+                        <FooterLinkTitle>Our Services</FooterLinkTitle>
+                        <FooterLink>Website Development</FooterLink>
+                        <FooterLink>MObile App Development</FooterLink>
+                        <FooterLink>Trainings</FooterLink>
+                        <FooterLink>Business Branding</FooterLink>
                     </FooterLinksItems>
                 </FooterLinksWrapper>
             </FooterLinksContainer>
             <SocialMedia>
                 <SocialMediaWrap>
-                    <SocialLogo to="/">
+                    <SocialLogo to="/" onClick={toggleHome}>
                         <SocialIcon/>
-                        ULTRA
+                        UltraTech
                     </SocialLogo>
-                    <WebsiteRights>ULTRA 2021</WebsiteRights>
+                    
                     <SocialIcons>
                         <SocialIconLink href="/" target="_blank" aria-label="Facebook">
                              <FaFacebook/>
@@ -83,6 +82,7 @@ export const Footer = () => {
                         </SocialIconLink>
                         
                     </SocialIcons>
+                    <WebsiteRights>All Right Reserved UltraTech 2021</WebsiteRights>
                 </SocialMediaWrap>
             </SocialMedia>
             

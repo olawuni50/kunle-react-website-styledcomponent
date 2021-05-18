@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
+
 import styled from 'styled-components';
+
 
 export const PricingSection = styled.div`
   padding: 100px 0 160px;
@@ -7,13 +9,14 @@ export const PricingSection = styled.div`
   flex-direction: column;
   justify-content: center;
   background: #4b59f7;
+
 `;
 
 export const PricingWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto; 
 
   @media screen and (max-width: 960px) {
     margin: 0 30px;
@@ -25,8 +28,10 @@ export const PricingWrapper = styled.div`
 
 export const PricingHeading = styled.h1`
   color: #fff;
-  font-size: 48px;
+  font-size: 30px;
   margin-bottom: 24px;
+  /* border-bottom: 3px solid #101522; */
+
 `;
 
 export const PricingContainer = styled.div`
@@ -43,13 +48,13 @@ export const PricingContainer = styled.div`
   }
 `;
 
-export const PricingCard = styled(Link)`
+export const PricingCard = styled(LinkR)`
   background: #242424;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
   width: 280px;
   height: 500px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 15px 70px 30px;
 
   &:nth-child(2) {
     margin: 24px;
@@ -104,6 +109,7 @@ export const PricingCardFeatures = styled.ul`
   flex-direction: column;
   align-items: center;
   color: #a9b3c1;
+  font-size: 20px;
 `;
 
 export const PricingCardFeature = styled.li`

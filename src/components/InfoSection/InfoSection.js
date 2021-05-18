@@ -1,15 +1,17 @@
 import React from 'react'
 import { Button, Container } from '../NavBars/globalStyles'
-import {Link} from "react-router-dom"
 import {InfoSec, InfoRow, InfoColumn, TextWrapper, TopLine, Heading, 
-Subtitle, ImgWrapper, Img} from "./InfoSection.element"
+Subtitle, ImgWrapper, Img, Btn} from "./InfoSection.element";
 
 
-const InfoSection = ({primary, lightBg, imgStart, lightTopLine, lightTextDesc, 
+
+
+const InfoSection = ({id, Bg, primary, lightBg, imgStart, lightTopLine, lightTextDesc, 
 buttonLabel, description,headLine, lightText, topLine, img, alt, start}) => {
     return (
         <>
-          <InfoSec lightBg={lightBg}>
+        
+          <InfoSec lightBg={lightBg} id={id}>
               <Container>
               <InfoRow imgStart={imgStart}>
                     <InfoColumn>
@@ -17,11 +19,11 @@ buttonLabel, description,headLine, lightText, topLine, img, alt, start}) => {
                             <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headLine}</Heading>
                             <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                            <Link to="/sign-up">
+                            <Btn>
                                 <Button big fontBig primary={primary}>
                                     {buttonLabel}
                                 </Button>
-                            </Link>
+                            </Btn>
                         </TextWrapper>
                     </InfoColumn>
                     <InfoColumn>
@@ -30,9 +32,11 @@ buttonLabel, description,headLine, lightText, topLine, img, alt, start}) => {
                     </ImgWrapper>    
                     </InfoColumn> 
                 </InfoRow>
+                
               </Container>
-             
+              
               </InfoSec>  
+             
         </>
     )
 }

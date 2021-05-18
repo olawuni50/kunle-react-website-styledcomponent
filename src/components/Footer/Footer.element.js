@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import {Link} from "react-router-dom"
 import {FaMagento} from "react-icons/fa"
+import imgg from "../../Images/curveNegative.svg"
 
 export const FooterContainer = styled.div`
+background-image: url(${imgg});
 background-color: #101522;
 padding: 4rem 0 2rem 0;
 display:flex;
@@ -49,6 +51,7 @@ export const FormInput = styled.input`
 padding: 10px 20px;
 border-radius: 2px;
 margin-right: 20px;
+margin-bottom: 5px;
 outline: none;
 border: none;
 font-size: 16px;
@@ -62,7 +65,7 @@ border: 1px solid #fff;
 @media screen and(max-width: 820px){
     width: 100%;
     margin: 0 0 16px 0;
-}
+} 
 `;
 
 export const FooterLinksContainer = styled.div`
@@ -143,15 +146,33 @@ justify-self: start;
  display: flex;
  align-items: center;
  margin-bottom: 16px;
+ 
+ &:hover{
+    color: #0467fb;
+    transition: 0.3s ease-out;
+
+ }
  `
 
  export const SocialIcon = styled(FaMagento)`
  margin-right: 10px;
- `
 
+ &:hover{
+    color: #0467fb;
+    transition: 0.3s ease-out;
+ }
+
+`
  export const WebsiteRights = styled.small`
  color: #fff;
+ margin-top: 50px;
+ border-top: 2px solid #fff;
+ padding: 10px;
+ font-size:10px;
  margin-bottom: 16px;
+ justify-content:center;
+ align-content: center;
+ font-size: 1rem;
  `
 
  export const SocialIcons = styled.div`
@@ -159,10 +180,22 @@ justify-self: start;
  justify-content: space-between;
  align-items: center;
  width: 240px;
+
+ &:hover{
+    color: #0467fb;
+    transition: 0.3s ease-out;
+
+ }
  `;
 
  export const SocialIconLink= styled.a`
  color: #fff;
  font-size: 24px;
+
+ &:hover{
+    color: #0467fb;
+    transition: 0.3s ease-out;
+
+ }
 
  ` 

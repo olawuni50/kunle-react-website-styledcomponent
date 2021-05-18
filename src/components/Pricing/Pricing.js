@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button } from '../NavBars/globalStyles';
-import { AiFillThunderbolt } from 'react-icons/ai';
+// import { AiFillThunderbolt } from 'react-icons/ai';
 import { GiCrystalBars } from 'react-icons/gi';
 import { GiCutDiamond, GiRock } from 'react-icons/gi';
-import { GiFloatingCrystal } from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
 import {
   PricingSection,
@@ -20,14 +19,15 @@ import {
   PricingCardFeature
 } from './Pricing.element';
 
+
 function Pricing() {
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
-      <PricingSection>
+      <PricingSection id="services">
         <PricingWrapper>
-          <PricingHeading>Our Services</PricingHeading>
+          <PricingHeading >Our Plans</PricingHeading>
           <PricingContainer>
-            <PricingCard to='/sign-up'>
+            <PricingCard>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiRock />
@@ -40,10 +40,10 @@ function Pricing() {
                   <PricingCardFeature>$10,000 Budget</PricingCardFeature>
                   <PricingCardFeature>Retargeting analytics</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <Button primary big="true" fontBig="true">Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+            <PricingCard>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCrystalBars />
@@ -56,10 +56,10 @@ function Pricing() {
                   <PricingCardFeature>$50,000 Budget</PricingCardFeature>
                   <PricingCardFeature>Lead Gen Analytics</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <Button primary big="true" fontBig="true">Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+            <PricingCard>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCutDiamond />
@@ -72,7 +72,7 @@ function Pricing() {
                   <PricingCardFeature>Unlimited Budget</PricingCardFeature>
                   <PricingCardFeature>24/7 Support</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <Button primary big="true" fontBig="true">Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
           </PricingContainer>
